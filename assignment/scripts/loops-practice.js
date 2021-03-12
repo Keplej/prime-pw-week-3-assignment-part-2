@@ -42,6 +42,10 @@ for (var i = 0; i < 11; i++) {
   }
 }
 
+//We need start with i = 0 and i < 11 so we can have the range of 2 to 10
+//Then write and if statement and have i % to 2 === 0
+//Use i % 2 === 0 to keep the numbers even. It checks if the number is divisible by 2
+
 // 1.d. (STRETCH) TODO: Write a for loop to do a counddown from 5 to 0
 console.log('STRETCH: countdown from 5 to 0');
 
