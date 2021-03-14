@@ -14,7 +14,7 @@ for (let i=0; i<4; i++) {
 //   - Which part of the example loop do you need to change to do this?
 console.log('count from 0 to 5');
 
-for (var i = 0; i < 6; i++) {
+for (let i = 0; i < 6; i++) {
   console.log(i);
 }
 
@@ -25,7 +25,7 @@ for (var i = 0; i < 6; i++) {
 //   - Which part of the example loop do you need to change to do this?
 console.log('count from 3 to 5');
 
-for (var i = 3; i < 6; i++) {
+for (let i = 3; i < 6; i++) {
  console.log(i);
 }
 
@@ -35,21 +35,19 @@ for (var i = 3; i < 6; i++) {
 //   - Which part of the example loop do you need to change to do this?
 console.log('count even numbers from 2 to 10 (2, 4, 6, 8, 10):');
 
-
-for (var i = 0; i < 11; i++) {
-  if(i % 2 === 0) {
+for (let i = 2; i < 11; i+=2) {
     console.log(i);
-  }
 }
 
-//We need start with i = 0 and i < 11 so we can have the range of 2 to 10
-//Then write and if statement and have i % to 2 === 0
-//Use i % 2 === 0 to keep the numbers even. It checks if the number is divisible by 2
+//We need start with i = 2 and i < 11 so we can have the range of 2 to 10
+//Then have i+=2 so we count every even number
+//(NOTE: Went back and fixed from var to let for i and didn't have to use a if statement.)
+
 
 // 1.d. (STRETCH) TODO: Write a for loop to do a counddown from 5 to 0
 console.log('STRETCH: countdown from 5 to 0');
 
-for (var i = 5; i >= 0; i--) {
+for (let i = 5; i >= 0; i--) {
  console.log(i);
 }
 
@@ -67,14 +65,14 @@ console.log('---- 3. While loop ----');
 
 // 3.a. TODO: Write a while loop to console.log each star in the 'stars' array
 console.log('Some stars using while:')
-var i = 0;
+i = 0;
 while (i < stars.length) {
   console.log(stars[i]);
   i = i + 1;
 }
 // 3.b. TODO: Write a while loop to console.log the numbers from 0 to 5
 console.log('count from 0 to 5')
-var i = 0;
+i = 0;
 while (i < 6) {
   console.log(i);
   i++;
@@ -83,8 +81,12 @@ while (i < 6) {
 // 3.c. TODO: Write a while loop to console.log the numbers from 10 to 5
 console.log('count backwards from 10 to 5');
 
-var i = 10
+i = 10
 while (i > 4) {
   console.log(i);
   i--;
 }
+
+//Personal notes
+//Was using var for questions 3a - 3c but remembered in class that we don't want to use var anymore.
+//So went back and tried using let but let was giving me an error. Set i just equal to the number and it worked!
